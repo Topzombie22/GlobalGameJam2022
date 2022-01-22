@@ -11,6 +11,12 @@ public class DeathBoxes : MonoBehaviour
     private Text _text;
     [SerializeField]
     private GameObject deathScreen;
+    [SerializeField]
+    private Text sanityText;
+    [SerializeField]
+    private Image sanitySprite;
+    [SerializeField]
+    private Image sanityBar;
 
 
     // Start is called before the first frame update
@@ -32,6 +38,9 @@ public class DeathBoxes : MonoBehaviour
             Debug.Log("Touched");
             collision.gameObject.GetComponent<PlayerController>().enabled = false;
             deathScreen.SetActive(true);
+            sanityBar.CrossFadeAlpha(0f, 2f, false);
+            sanitySprite.CrossFadeAlpha(0f, 2f, false);
+            sanityText.CrossFadeAlpha(0f, 2f, false);
             backGround.CrossFadeAlpha(255f, 2f, false);
             StartCoroutine(TextTimer());
         }

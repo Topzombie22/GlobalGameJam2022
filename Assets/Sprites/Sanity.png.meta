@@ -1,0 +1,1089 @@
+fileFormatVersion: 2
+guid: 9aafe4fd9add0604a9207c43ba247081
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3175160277084138384
+    second: Sanity_0
+  - first:
+      213: -4462664591776096160
+    second: Sanity_1
+  - first:
+      213: 2963005728990006899
+    second: Sanity_2
+  - first:
+      213: 6888659427674219749
+    second: Sanity_3
+  - first:
+      213: -201079552090179815
+    second: Sanity_4
+  - first:
+      213: 2472160625202636072
+    second: Sanity_5
+  - first:
+      213: 3684462828885841647
+    second: Sanity_6
+  - first:
+      213: -6910691837256448819
+    second: Sanity_7
+  - first:
+      213: 9154009121678517696
+    second: Sanity_8
+  - first:
+      213: -3048722468833683326
+    second: Sanity_9
+  - first:
+      213: 6205852121740163223
+    second: Sanity_10
+  - first:
+      213: -7742785950377182033
+    second: Sanity_11
+  - first:
+      213: 8983338427290387988
+    second: Sanity_12
+  - first:
+      213: 7980126905092840161
+    second: Sanity_13
+  - first:
+      213: -7666828166852112475
+    second: Sanity_14
+  - first:
+      213: -7463098012307973128
+    second: Sanity_15
+  - first:
+      213: 2034858662330220151
+    second: Sanity_16
+  - first:
+      213: 7774463477648716659
+    second: Sanity_17
+  - first:
+      213: 1004527654116329549
+    second: Sanity_18
+  - first:
+      213: -4519750111731398960
+    second: Sanity_19
+  - first:
+      213: 4592044402424305093
+    second: Sanity_20
+  - first:
+      213: -5545088920303838953
+    second: Sanity_21
+  - first:
+      213: -9020387283557182805
+    second: Sanity_22
+  - first:
+      213: -3586252606446581651
+    second: Sanity_23
+  - first:
+      213: -6054657753571440260
+    second: Sanity_24
+  - first:
+      213: 4411748236633198402
+    second: Sanity_25
+  - first:
+      213: 5192793206507065442
+    second: Sanity_26
+  - first:
+      213: 4282488214586119096
+    second: Sanity_27
+  - first:
+      213: 6781578477397543812
+    second: Sanity_28
+  - first:
+      213: -2794940877391019720
+    second: Sanity_29
+  - first:
+      213: 945623996466946549
+    second: Sanity_30
+  - first:
+      213: -7964075661215326456
+    second: Sanity_31
+  - first:
+      213: -853506374407732301
+    second: Sanity_32
+  - first:
+      213: 7382110643494874209
+    second: Sanity_33
+  - first:
+      213: 3210956839470545392
+    second: Sanity_34
+  - first:
+      213: 7204008395732082801
+    second: Sanity_35
+  - first:
+      213: -6348745999355696927
+    second: Sanity_36
+  - first:
+      213: 4737022072442787109
+    second: Sanity_37
+  - first:
+      213: -7302305125119969476
+    second: Sanity_38
+  - first:
+      213: -3876402248706275522
+    second: Sanity_39
+  - first:
+      213: 6702124902817046316
+    second: Sanity_40
+  - first:
+      213: -5273382841388212313
+    second: Sanity_41
+  - first:
+      213: -2476603916845098402
+    second: Sanity_42
+  - first:
+      213: 217157640330347263
+    second: Sanity_43
+  - first:
+      213: -6926957888641476614
+    second: Sanity_44
+  - first:
+      213: 2736013942003863491
+    second: Sanity_45
+  - first:
+      213: -794837689357886357
+    second: Sanity_46
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sanity_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 932
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09be784037f601c20800000000000000
+      internalID: 3175160277084138384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_1
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 932
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 060e87fa23e6112c0800000000000000
+      internalID: -4462664591776096160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_2
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 932
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37e85e70306be1920800000000000000
+      internalID: 2963005728990006899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_3
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 932
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e4ea25704f699f50800000000000000
+      internalID: 6888659427674219749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_4
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 932
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 917f116763f953df0800000000000000
+      internalID: -201079552090179815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_5
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 932
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82529e49df0ee4220800000000000000
+      internalID: 2472160625202636072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_6
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 932
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe61fd7fb67d12330800000000000000
+      internalID: 3684462828885841647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 840
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc44320736a4810a0800000000000000
+      internalID: -6910691837256448819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_8
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 840
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c56550dbc2990f70800000000000000
+      internalID: 9154009121678517696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 840
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2889a624113c0b5d0800000000000000
+      internalID: -3048722468833683326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_10
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 840
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7983decef9d9f1650800000000000000
+      internalID: 6205852121740163223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_11
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 840
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: facf1ef73391c8490800000000000000
+      internalID: -7742785950377182033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_12
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 840
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41682cf24ba3bac70800000000000000
+      internalID: 8983338427290387988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_13
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 840
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ea9890c32b1fbe60800000000000000
+      internalID: 7980126905092840161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 748
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5af02d02764f99590800000000000000
+      internalID: -7666828166852112475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_15
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 748
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fb957426efbd6890800000000000000
+      internalID: -7463098012307973128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_16
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 748
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77eb1581c254d3c10800000000000000
+      internalID: 2034858662330220151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_17
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 748
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 373ff70975174eb60800000000000000
+      internalID: 7774463477648716659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_18
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 748
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4809a6449cc0fd00800000000000000
+      internalID: 1004527654116329549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_19
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 748
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d6c7b4583f9641c0800000000000000
+      internalID: -4519750111731398960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_20
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 748
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c55257ed083abf30800000000000000
+      internalID: 4592044402424305093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 656
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 719d5519103eb03b0800000000000000
+      internalID: -5545088920303838953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_22
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 656
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba29f13ce8521d280800000000000000
+      internalID: -9020387283557182805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_23
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 656
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d68cee551421b3ec0800000000000000
+      internalID: -3586252606446581651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_24
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 656
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c794fc12ad889fba0800000000000000
+      internalID: -6054657753571440260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_25
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 656
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24f4af295ada93d30800000000000000
+      internalID: 4411748236633198402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_26
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 656
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2605ae1a8e1801840800000000000000
+      internalID: 5192793206507065442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_27
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 656
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b3d33177547e6b30800000000000000
+      internalID: 4282488214586119096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 564
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48b07b1e1b10d1e50800000000000000
+      internalID: 6781578477397543812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_29
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 564
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 831c3ea84106639d0800000000000000
+      internalID: -2794940877391019720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_30
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 564
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f16f70c3088f1d00800000000000000
+      internalID: 945623996466946549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_31
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 564
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80f1de0b16be97190800000000000000
+      internalID: -7964075661215326456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_32
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 564
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b345eb797cb724f0800000000000000
+      internalID: -853506374407732301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_33
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 564
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16c6426a486827660800000000000000
+      internalID: 7382110643494874209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_34
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 564
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f9b0cdab3c9f8c20800000000000000
+      internalID: 3210956839470545392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 472
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 170ea8aa777c9f360800000000000000
+      internalID: 7204008395732082801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_36
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 472
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e8a8339629b4e7a0800000000000000
+      internalID: -6348745999355696927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_37
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 472
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52513212a784db140800000000000000
+      internalID: 4737022072442787109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_38
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 472
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c37b5bf8d2009aa90800000000000000
+      internalID: -7302305125119969476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanity_39
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 472
+        width: 144
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e37465f51b0443ac0800000000000000
+      internalID: -3876402248706275522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
