@@ -784,8 +784,9 @@ MonoBehaviour:
   canMove: 0
   input: 0
   movement: {x: 0, y: 0}
-  canDash: 0
-  dashDist: 0
+  canDash: 1
+  dashDist: 30
+  isDashing: 0
 --- !u!1 &807678979
 GameObject:
   m_ObjectHideFlags: 3

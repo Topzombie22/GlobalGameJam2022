@@ -30,6 +30,8 @@ public class PlayerController : MonoBehaviour
     private bool canDash;
     [SerializeField]
     private float dashDist;
+    [SerializeField]
+    private bool isDashing;
 
 
     void Start()
@@ -51,8 +53,12 @@ public class PlayerController : MonoBehaviour
     private void Move()
     {
         input = (Input.GetAxis("Horizontal"));
-        transform.position += new Vector3(input, 0, 0) * Time.deltaTime * speed;
-        
+
+        if (isDashing == false)
+        {
+            transform.position += new Vector3(input, 0, 0) * Time.deltaTime * speed;
+        }
+
         if (canRaycast == true)
         {
             if (Physics2D.Raycast(player.position - new Vector3(0, pSprite.bounds.extents.y + 0.01f, 0), Vector2.down, rayCastDist))
@@ -63,31 +69,48 @@ public class PlayerController : MonoBehaviour
 
         if (canJump == true && Input.GetKeyDown(KeyCode.Space))
         {
-            rb.velocity = (new Vector2(rb.velocity.x, 0));
-            rb.AddForce(new Vector2(0, jumpHeight), ForceMode2D.Impulse);
-            canJump = false;
-            canRaycast = false;
-            StartCoroutine(RaycastTimer());
+            if (isDashing == false)
+            {
+                rb.velocity = (new Vector2(rb.velocity.x, 0));
+                rb.AddForce(new Vector2(0, jumpHeight), ForceMode2D.Impulse);
+                canJump = false;
+                canRaycast = false;
+                StartCoroutine(RaycastTimer());
+            }
         }
 
-        //if (canDash == true && Input.GetKeyDown(KeyCode.LeftShift))
-        //{
-        //    if (rb.velocity.x > 0.01)
-        //    {
-        //      //  Vector3.Lerp(new Vector3(player.transform.position.x))
-        //    }
-
-        //    if (rb.velocity.x < -0.01)
-        //    {
-
-        //    }
-        //}
+        if (canDash == true && Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            StartCoroutine(MoveTimer());
+        }
     }
 
     IEnumerator RaycastTimer()
     {
         yield return new WaitForSeconds(0.1f);
         canRaycast = true;
+    }
+
+    IEnumerator MoveTimer()
+    {
+        isDashing = true;
+        canDash = false;
+        rb.velocity = new Vector2(rb.velocity.x, 0f);
+        if (input > 0.01)
+        {
+            rb.AddForce(new Vector2(dashDist * 1, 0f), ForceMode2D.Impulse);
+        }
+        else if (input < -0.01)
+        {
+            rb.AddForce(new Vector2(dashDist * - 1, 0f), ForceMode2D.Impulse);
+        }
+        float gravity = rb.gravityScale;
+        rb.gravityScale = 0;
+        yield return new WaitForSeconds(0.25f);
+        rb.gravityScale = gravity;
+        rb.velocity = new Vector2(0f, 0f);
+        isDashing = false;
+        canDash = true;
     }
 
 }
