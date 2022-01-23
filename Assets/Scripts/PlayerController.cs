@@ -32,6 +32,8 @@ public class PlayerController : MonoBehaviour
     private float dashDist;
     [SerializeField]
     private bool isDashing;
+    [SerializeField]
+    private bool zone1;
 
 
     void Start()
