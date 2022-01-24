@@ -7,10 +7,13 @@ public class FadeInScript : MonoBehaviour
 {
     [SerializeField]
     private Image fadeAble;
+    [SerializeField]
+    private GameObject canvas;
 
     // Start is called before the first frame update
     void Start()
     {
+        canvas.SetActive(true);
         StartCoroutine(FadeIn());
     }
 
