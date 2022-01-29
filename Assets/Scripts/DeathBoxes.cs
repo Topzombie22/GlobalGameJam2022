@@ -19,6 +19,9 @@ public class DeathBoxes : MonoBehaviour
     private Image sanityBar;
     private GameObject player;
 
+    [SerializeField]
+    private Transform cam;
+
     public AudioManagerPlayer _audio;
     public GameObject audioManager;
 
@@ -43,6 +46,9 @@ public class DeathBoxes : MonoBehaviour
 
             if (player.GetComponent<PlayerController>().sanity <= 0)
             {
+                var vcam = cam.gameObject.GetComponent<Cinemachine.CinemachineVirtualCamera>();
+                vcam.LookAt = null;
+                vcam.Follow = null;
                 Debug.Log("Touched2");
                 collision.gameObject.GetComponent<PlayerController>().enabled = false;
                 deathScreen.SetActive(true);
@@ -56,7 +62,13 @@ public class DeathBoxes : MonoBehaviour
 
             if (player.GetComponent<PlayerController>().sanity > 0)
             {
-                player.GetComponent<PlayerController>().sanity -= 1f;
+                var vcam = cam.gameObject.GetComponent<Cinemachine.CinemachineVirtualCamera>();
+                vcam.LookAt = null;
+                vcam.Follow = null;
+                if (player.GetComponent<PlayerController>().justTookDamage == false)
+                {
+                    player.GetComponent<PlayerController>().sanity -= 1f;
+                }
                 Debug.Log("Touched1");
                 collision.gameObject.GetComponent<PlayerController>().enabled = false;
                 deathScreen.SetActive(true);
@@ -81,6 +93,9 @@ public class DeathBoxes : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         player.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
+        var vcam = cam.gameObject.GetComponent<Cinemachine.CinemachineVirtualCamera>();
+        vcam.LookAt = player.transform;
+        vcam.Follow = player.transform;
         player.gameObject.GetComponent<PlayerController>().transform.position = player.gameObject.GetComponent<PlayerController>().safePos;
         sanityBar.CrossFadeAlpha(255f, 2f, false);
         sanitySprite.CrossFadeAlpha(255f, 2f, false);

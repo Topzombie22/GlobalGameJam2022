@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AudioManagerPlayer : MonoBehaviour
 {
-    public AudioSource footSteps;
     public AudioSource jump;
     public AudioSource dash;
     public AudioSource fall;
@@ -13,7 +12,6 @@ public class AudioManagerPlayer : MonoBehaviour
     public AudioSource takeDamage;
 
 
-    public AudioClip _footSteps;
     public AudioClip _jump;
     public AudioClip _dash;
     public AudioClip _fall;
@@ -28,7 +26,6 @@ public class AudioManagerPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        footSteps.clip = _footSteps;
         jump.clip = _jump;
         dash.clip = _dash;
         fall.clip = _fall;
@@ -64,16 +61,6 @@ public class AudioManagerPlayer : MonoBehaviour
     public void PlayJump()
     {
         jump.Play();
-    }
-
-    public void PlayFootsteps()
-    {
-        footSteps.Play();
-    }
-
-    public void StopFootsteps()
-    {
-        footSteps.Stop();
     }
 
     public void PlayFall()

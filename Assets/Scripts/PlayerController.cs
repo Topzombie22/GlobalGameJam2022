@@ -42,12 +42,19 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public Vector3 safePos;
 
+    public Vector3 velocity;
+
+    [SerializeField]
+    private Animator anim;
+
     private Vector3 enemyPos;
 
     public AudioManagerPlayer _audio;
     public GameObject audioManager;
     [SerializeField]
     private bool isGrounded;
+
+    public bool justTookDamage;
 
     private bool footStepsPlaying;
 
@@ -61,7 +68,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        sanitySlider.value = Mathf.Lerp(sanitySlider.value, sanity, 6.0f * Time.deltaTime);
+        sanitySlider.value = Mathf.Lerp(sanitySlider.value, sanity, 1f * Time.deltaTime);
 
         Move();
     }
@@ -74,14 +81,18 @@ public class PlayerController : MonoBehaviour
     private void Move()
     {
         input = (Input.GetAxis("Horizontal"));
+        anim.SetFloat("Direction", input);
+        anim.SetBool("IsGrounded", isGrounded);
 
-        if (isGrounded == true && input != 0)
+        if(input < -0.01)
         {
-            _audio.PlayFootsteps();
+            anim.SetFloat("Speed", input * -1);
+            pSprite.flipX = true;
         }
-        if (isGrounded == false && input == 0)
+        else if (input > 0.01)
         {
-            _audio.StopFootsteps();
+            anim.SetFloat("Speed", input * 1);
+            pSprite.flipX = false;
         }
 
         if (isDashing == false && canMove == true)
@@ -101,6 +112,11 @@ public class PlayerController : MonoBehaviour
             {
                 isGrounded = false;
             }
+        }
+        
+        if (canJump == true)
+        {
+            Vector3 posFix = safePos;
         }
 
         if (canJump == true && Input.GetKeyDown(KeyCode.Space))
@@ -152,6 +168,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
+            StartCoroutine(InvulnTimer());
             collision.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
             enemyPos = collision.gameObject.transform.position;
             Debug.Log("Bang");
@@ -161,7 +178,9 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator TakeDamage()
     {
+        justTookDamage = true;
         canMove = false;
+        sanity = sanity - 1;
         if (enemyPos.x - gameObject.transform.position.x < 0)
         {
             rb.velocity = (new Vector2(0, 0));
@@ -175,6 +194,12 @@ public class PlayerController : MonoBehaviour
         _audio.PlayTakeDamage();
         yield return new WaitForSeconds(1f);
         canMove = true;
+    }
+
+    IEnumerator InvulnTimer()
+    {
+        yield return new WaitForSeconds(2.5f);
+        justTookDamage = false;
     }
 
     IEnumerator RaycastTimer()
