@@ -6,6 +6,8 @@ TagManager:
   tags:
   - DeathBox
   - UI
+  - Enemy
+  - EnemyHead
   layers:
   - Default
   - TransparentFX
