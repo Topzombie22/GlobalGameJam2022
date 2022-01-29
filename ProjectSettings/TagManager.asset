@@ -8,6 +8,7 @@ TagManager:
   - UI
   - Enemy
   - EnemyHead
+  - Tutorial
   layers:
   - Default
   - TransparentFX

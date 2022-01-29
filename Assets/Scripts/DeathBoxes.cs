@@ -22,6 +22,9 @@ public class DeathBoxes : MonoBehaviour
     [SerializeField]
     private Transform cam;
 
+    public TextBoxController text;
+    public GameObject textBox;
+
     public AudioManagerPlayer _audio;
     public GameObject audioManager;
 
@@ -29,6 +32,7 @@ public class DeathBoxes : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        text = textBox.GetComponent<TextBoxController>();
         _audio = audioManager.GetComponent<AudioManagerPlayer>();
     }
 
@@ -92,6 +96,7 @@ public class DeathBoxes : MonoBehaviour
     IEnumerator AliveTimer()
     {
         yield return new WaitForSeconds(2f);
+        text.textBox = Random.Range(7, 9);
         player.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
         var vcam = cam.gameObject.GetComponent<Cinemachine.CinemachineVirtualCamera>();
         vcam.LookAt = player.transform;

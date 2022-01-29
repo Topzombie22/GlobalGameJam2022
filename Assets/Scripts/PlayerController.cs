@@ -42,7 +42,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public Vector3 safePos;
 
-    public Vector3 velocity;
+    public TextBoxController text;
+    public GameObject textBox;
 
     [SerializeField]
     private Animator anim;
@@ -61,6 +62,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        text = textBox.GetComponent<TextBoxController>();
         _audio = audioManager.GetComponent<AudioManagerPlayer>();
         rb = GetComponent<Rigidbody2D>();
     }
@@ -119,7 +121,7 @@ public class PlayerController : MonoBehaviour
             Vector3 posFix = safePos;
         }
 
-        if (canJump == true && Input.GetKeyDown(KeyCode.Space))
+        if (canJump == true && Input.GetButtonDown("Jump"))
         {
             if (isDashing == false)
             {
@@ -132,7 +134,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (canDash == true && Input.GetKeyDown(KeyCode.LeftShift))
+        if (canDash == true && Input.GetButtonDown("Fire2"))
         {
             canDash = false;
             _audio.PlayDash();
@@ -172,6 +174,7 @@ public class PlayerController : MonoBehaviour
             collision.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
             enemyPos = collision.gameObject.transform.position;
             Debug.Log("Bang");
+            text.textBox = Random.Range(4, 6);
             StartCoroutine(TakeDamage());
         }
     }
