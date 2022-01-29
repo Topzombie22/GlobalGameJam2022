@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("Direction", input);
         anim.SetBool("IsGrounded", isGrounded);
 
-        if(input < -0.01)
+        if (input < -0.01)
         {
             anim.SetFloat("Speed", input * -1);
             pSprite.flipX = true;
@@ -104,7 +104,7 @@ public class PlayerController : MonoBehaviour
 
         if (canRaycast == true)
         {
-            if (Physics2D.Raycast(player.position - new Vector3(0, pSprite.bounds.extents.y + 0.01f, 0), Vector2.down, rayCastDist, ~3))
+            if (Physics2D.Raycast(player.position - new Vector3(0, pSprite.bounds.extents.y + 0.01f, 0), Vector2.down, rayCastDist, ~4))
             {
                 canJump = true;
                 isGrounded = true;
@@ -163,6 +163,11 @@ public class PlayerController : MonoBehaviour
             {
 
             }
+        }
+
+        if (collision.gameObject.name == "Transition")
+        {
+
         }
     }
 
@@ -242,5 +247,4 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         canDash = true;
     }
-
 }

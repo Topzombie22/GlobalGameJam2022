@@ -112,7 +112,7 @@ public class TextBoxController : MonoBehaviour
             text.text = curText.Substring(0, i);
             yield return new WaitForSeconds(0.05f);
         }
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(2f);
         text.text = textWipe;
     }
 
