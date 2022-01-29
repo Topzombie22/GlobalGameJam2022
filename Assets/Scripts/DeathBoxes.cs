@@ -17,12 +17,16 @@ public class DeathBoxes : MonoBehaviour
     private Image sanitySprite;
     [SerializeField]
     private Image sanityBar;
+    private GameObject player;
+
+    public AudioManagerPlayer _audio;
+    public GameObject audioManager;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        _audio = audioManager.GetComponent<AudioManagerPlayer>();
     }
 
     // Update is called once per frame
@@ -35,14 +39,34 @@ public class DeathBoxes : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("Touched");
-            collision.gameObject.GetComponent<PlayerController>().enabled = false;
-            deathScreen.SetActive(true);
-            sanityBar.CrossFadeAlpha(0f, 2f, false);
-            sanitySprite.CrossFadeAlpha(0f, 2f, false);
-            sanityText.CrossFadeAlpha(0f, 2f, false);
-            backGround.CrossFadeAlpha(255f, 2f, false);
-            StartCoroutine(TextTimer());
+            player = collision.gameObject;
+
+            if (player.GetComponent<PlayerController>().sanity <= 0)
+            {
+                Debug.Log("Touched2");
+                collision.gameObject.GetComponent<PlayerController>().enabled = false;
+                deathScreen.SetActive(true);
+                sanityBar.CrossFadeAlpha(0f, 2f, false);
+                sanitySprite.CrossFadeAlpha(0f, 2f, false);
+                sanityText.CrossFadeAlpha(0f, 2f, false);
+                backGround.CrossFadeAlpha(255f, 2f, false);
+                _audio.PlayFall();
+                StartCoroutine(TextTimer());
+            }
+
+            if (player.GetComponent<PlayerController>().sanity > 0)
+            {
+                player.GetComponent<PlayerController>().sanity -= 1f;
+                Debug.Log("Touched1");
+                collision.gameObject.GetComponent<PlayerController>().enabled = false;
+                deathScreen.SetActive(true);
+                sanityBar.CrossFadeAlpha(1f, 2f, false);
+                sanitySprite.CrossFadeAlpha(1f, 2f, false);
+                sanityText.CrossFadeAlpha(1f, 2f, false);
+                backGround.CrossFadeAlpha(255f, 2f, false);
+                _audio.PlayFall();
+                StartCoroutine(AliveTimer());
+            }
         }
     }
 
@@ -52,4 +76,17 @@ public class DeathBoxes : MonoBehaviour
         _text.CrossFadeAlpha(255f, 2f, false);
     }
 
+
+    IEnumerator AliveTimer()
+    {
+        yield return new WaitForSeconds(2f);
+        player.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
+        player.gameObject.GetComponent<PlayerController>().transform.position = player.gameObject.GetComponent<PlayerController>().safePos;
+        sanityBar.CrossFadeAlpha(255f, 2f, false);
+        sanitySprite.CrossFadeAlpha(255f, 2f, false);
+        sanityText.CrossFadeAlpha(255f, 2f, false);
+        backGround.CrossFadeAlpha(0f, 2f, false);
+        player.gameObject.GetComponent<PlayerController>().enabled = true;
+        yield return new WaitForSeconds(2f);
+    }
 }

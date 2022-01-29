@@ -6,6 +6,8 @@ public class CameraDirector : MonoBehaviour
 {
     [SerializeField]
     private Transform cam;
+    [SerializeField]
+    private Transform player;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +28,12 @@ public class CameraDirector : MonoBehaviour
             var vcam = GetComponent<Cinemachine.CinemachineVirtualCamera>();
             vcam.LookAt = null;
             vcam.Follow = null;
+        }
+        if (player.position.y > -2f)
+        {
+            var vcam = GetComponent<Cinemachine.CinemachineVirtualCamera>();
+            vcam.LookAt = player;
+            vcam.Follow = player;
         }
     }
 
