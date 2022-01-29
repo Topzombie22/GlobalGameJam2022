@@ -42,6 +42,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public Vector3 safePos;
 
+    private Vector3 enemyPos;
+
     public AudioManagerPlayer _audio;
     public GameObject audioManager;
     [SerializeField]
@@ -82,7 +84,7 @@ public class PlayerController : MonoBehaviour
             _audio.StopFootsteps();
         }
 
-        if (isDashing == false)
+        if (isDashing == false && canMove == true)
         {
             transform.position += new Vector3(input, 0, 0) * Time.deltaTime * speed;
         }
@@ -123,6 +125,58 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "EnemyHead" && player.transform.position.y > collision.transform.position.y)
+        {
+            Debug.Log("Collided");
+            collision.gameObject.transform.parent.localScale = new Vector3(collision.gameObject.transform.parent.localScale.x, 0.2f, 1f);
+            collision.gameObject.GetComponentInParent<AIScript>().enabled = false;
+            collision.gameObject.GetComponentInParent<Rigidbody2D>().simulated = false;
+            collision.gameObject.transform.parent.tag = "Untagged";
+            Destroy(collision.transform.parent.gameObject, 2f);
+            canJump = true;
+            if (Input.GetKey(KeyCode.Space))
+            {
+                rb.velocity = (new Vector2(rb.velocity.x, 0));
+                rb.AddForce(new Vector2(0, jumpHeight), ForceMode2D.Impulse);
+            }
+            else
+            {
+
+            }
+        }
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            collision.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+            enemyPos = collision.gameObject.transform.position;
+            Debug.Log("Bang");
+            StartCoroutine(TakeDamage());
+        }
+    }
+
+    IEnumerator TakeDamage()
+    {
+        canMove = false;
+        if (enemyPos.x - gameObject.transform.position.x < 0)
+        {
+            rb.velocity = (new Vector2(0, 0));
+            rb.AddForce(new Vector2(1 * jumpHeight, 6f), ForceMode2D.Impulse);
+        }
+        else if (enemyPos.x - gameObject.transform.position.x > 0)
+        {
+            rb.velocity = (new Vector2(0, 0));
+            rb.AddForce(new Vector2(-1 * jumpHeight, 6f), ForceMode2D.Impulse);
+        }
+        _audio.PlayTakeDamage();
+        yield return new WaitForSeconds(1f);
+        canMove = true;
+    }
+
     IEnumerator RaycastTimer()
     {
         yield return new WaitForSeconds(0.1f);
@@ -146,6 +200,11 @@ public class PlayerController : MonoBehaviour
         rb.gravityScale = 0;
         yield return new WaitForSeconds(0.25f);
         rb.gravityScale = gravity;
+        if (canMove == false)
+        {
+            isDashing = false;
+            yield break;   
+        }
         rb.velocity = new Vector2(0f, 0f);
         isDashing = false;
     }
