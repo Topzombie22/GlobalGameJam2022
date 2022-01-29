@@ -7,6 +7,12 @@ public class AIScript : MonoBehaviour
     [SerializeField]
     private float rayCastCheck;
     [SerializeField]
+    private float rayCastCheckDown;
+    [SerializeField]
+    private float raycastPosx;
+    [SerializeField]
+    private float raycastPosy;
+    [SerializeField]
     private bool movingLeft;
     [SerializeField]
     private bool turningAround;
@@ -18,6 +24,8 @@ public class AIScript : MonoBehaviour
     [SerializeField]
     private Rigidbody2D rb;
 
+    [SerializeField]
+    private BoxCollider2D bc;
 
     [SerializeField]
     private bool jumping;
@@ -49,51 +57,56 @@ public class AIScript : MonoBehaviour
         {
             if (movingLeft == true)
             {
-                RaycastHit2D hitLeftDown = (Physics2D.Raycast(this.gameObject.transform.position - new Vector3(pSprite.bounds.extents.x + 0.25f, 0, 0), Vector2.down, rayCastCheck));
-                if (hitLeftDown.collider == null)
-                {
-                    canRaycast = false;
-                    turningAround = true;
-                }
-                else
-                {
-                    //     Debug.DrawRay(this.gameObject.transform.position - new Vector3(pSprite.bounds.extents.x + 0.25f, 0, 0), Vector2.down, Color.blue, 1.0f);
-                }
+                //RaycastHit2D hitLeftDown = (Physics2D.Raycast(this.gameObject.transform.position - new Vector3(bc.bounds.extents.x + 0.25f, 0, 0), Vector2.down, rayCastCheckDown));
+                //if (hitLeftDown.collider == null)
+                //{
+                //    canRaycast = false;
+                //    turningAround = true;
+                //    Debug.Log("1");
+                //}
+                //else
+                //{
+                //       //  Debug.DrawRay(this.gameObject.transform.position - new Vector3(pSprite.bounds.extents.x + 0.25f, 0, 0), Vector2.down, Color.blue, 1.0f);
+                //}
 
-                RaycastHit2D hitLeft = (Physics2D.Raycast(this.gameObject.transform.position - new Vector3(pSprite.bounds.extents.x + 0.25f, 0, 0), Vector2.left, rayCastCheck));
-                if (hitLeft.collider != null && hitLeft.collider.tag != "Player")
+                RaycastHit2D hitLeft = (Physics2D.Raycast(this.gameObject.transform.position - new Vector3(this.gameObject.transform.position.x + raycastPosx, 0, 0), Vector2.left, rayCastCheck));
+                if (hitLeft.collider != null && hitLeft.collider.tag != "Player" && hitLeft.collider.tag != "Enemy")
                 {
                     canRaycast = false;
                     turningAround = true;
+                    Debug.Log("2");
+
                 }
                 else
                 {
-                    //         Debug.DrawRay(this.gameObject.transform.position - new Vector3(pSprite.bounds.extents.x + 0.25f, 0, 0), Vector2.left, Color.blue, 1.0f);
+                             Debug.DrawRay(this.gameObject.transform.position - new Vector3(this.gameObject.transform.position.x + raycastPosx, 0, 0), Vector2.left, Color.red, 1.0f);
                 }
             }
 
             if (movingLeft == false)
             {
-                RaycastHit2D hitRightDown = (Physics2D.Raycast(this.gameObject.transform.position - new Vector3(pSprite.bounds.extents.x - 1.25f, 0, 0), Vector2.down, rayCastCheck));
-                if (hitRightDown.collider == null)
-                {
-                    turningAround = true;
-                    canRaycast = false;
-                }
-                else
-                {
-                    //      Debug.DrawRay(this.gameObject.transform.position - new Vector3(pSprite.bounds.extents.x - 1.25f, 0, 0), Vector2.down, Color.blue, 1.0f);
-                }
+                //RaycastHit2D hitRightDown = (Physics2D.Raycast(this.gameObject.transform.position - new Vector3(bc.bounds.extents.x - 2.25f, 0, 0), Vector2.down, rayCastCheckDown));
+                //if (hitRightDown.collider == null)
+                //{
+                //    turningAround = true;
+                //    canRaycast = false;
+                //    Debug.Log("3");
+                //}
+                //else
+                //{
+                //       //   Debug.DrawRay(this.gameObject.transform.position - new Vector3(pSprite.bounds.extents.x - 1.25f, 0, 0), Vector2.down, Color.blue, 1.0f);
+                //}
 
-                RaycastHit2D hitRight = (Physics2D.Raycast(this.gameObject.transform.position - new Vector3(pSprite.bounds.extents.x - 1.25f, 0, 0), Vector2.right, rayCastCheck));
-                if (hitRight.collider != null && hitRight.collider.tag != "Player")
+                RaycastHit2D hitRight = (Physics2D.Raycast(this.gameObject.transform.position - new Vector3(this.gameObject.transform.position.x - raycastPosx, 0, 0), Vector2.right, rayCastCheck));
+                if (hitRight.collider != null && hitRight.collider.tag != "Player" && hitRight.collider.tag != "Enemy")
                 {
                     canRaycast = false;
                     turningAround = true;
+                    Debug.Log("4");
                 }
                 else
                 {
-                    //       Debug.DrawRay(this.gameObject.transform.position - new Vector3(pSprite.bounds.extents.x - 1.25f, 0, 0), Vector2.right, Color.blue, 1.0f);
+                           Debug.DrawRay(this.gameObject.transform.position - new Vector3(this.gameObject.transform.position.x - raycastPosx, 0, 0), Vector2.right, Color.blue, 1.0f);
                 }
             }
         }

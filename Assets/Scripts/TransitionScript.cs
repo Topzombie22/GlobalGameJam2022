@@ -128,11 +128,22 @@ public class TransitionScript : MonoBehaviour
         yield return new WaitForSeconds(1f);
         falling = true;
         volumeLerp = true;
+        _audio.PlayFall();
         backGround.CrossFadeAlpha(1f, 1f, false);
         yield return new WaitForSeconds(1f);
         deathScreen.SetActive(false);
         yield return new WaitForSeconds(2f);
         _audio.aboveGroundTheme.mute = true;
+        deathScreen.SetActive(true);
+        backGround.CrossFadeAlpha(255f, 1f, false);
+        yield return new WaitForSeconds(1.5f);
+        player.transform.position = new Vector2(zoneTwoSpawn.position.x, zoneTwoSpawn.position.y);
+        yield return new WaitForSeconds(1f);
+        backGround.CrossFadeAlpha(1f, 1f, false);
+        player.GetComponent<Rigidbody2D>().simulated = true;
+        yield return new WaitForSeconds(1f);
+        deathScreen.SetActive(false);
+        player.GetComponent<PlayerController>().enabled = true;
     }
 
 }

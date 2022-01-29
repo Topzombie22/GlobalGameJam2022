@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - EnemyHead
   - Tutorial
+  - Ground
   layers:
   - Default
   - TransparentFX

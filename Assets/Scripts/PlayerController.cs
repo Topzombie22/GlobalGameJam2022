@@ -42,6 +42,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public Vector3 safePos;
 
+    private bool groundedSound;
+
     public TextBoxController text;
     public GameObject textBox;
 
@@ -85,6 +87,8 @@ public class PlayerController : MonoBehaviour
         input = (Input.GetAxis("Horizontal"));
         anim.SetFloat("Direction", input);
         anim.SetBool("IsGrounded", isGrounded);
+        anim.SetFloat("Velocity", rb.velocity.y);
+        anim.SetBool("IsDashing", isDashing);
 
         if (input < -0.01)
         {
@@ -112,8 +116,15 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
+                groundedSound = false;
                 isGrounded = false;
             }
+        }
+
+        if (groundedSound == false)
+        {
+            _audio.PlayLanding();
+            groundedSound = true;
         }
         
         if (canJump == true)
@@ -125,6 +136,7 @@ public class PlayerController : MonoBehaviour
         {
             if (isDashing == false)
             {
+                anim.SetTrigger("Jump");
                 _audio.PlayJump();
                 rb.velocity = (new Vector2(rb.velocity.x, 0));
                 rb.AddForce(new Vector2(0, jumpHeight), ForceMode2D.Impulse);
@@ -134,8 +146,9 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (canDash == true && Input.GetButtonDown("Fire2"))
+        if (canDash == true && Input.GetButtonDown("Fire2") && input != 0)
         {
+            anim.SetTrigger("Dash");
             canDash = false;
             _audio.PlayDash();
             StartCoroutine(MoveTimer());

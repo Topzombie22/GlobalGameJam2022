@@ -10,6 +10,7 @@ public class AudioManagerPlayer : MonoBehaviour
     public AudioSource aboveGroundTheme;
     public AudioSource underGroundTheme;
     public AudioSource takeDamage;
+    public AudioSource landing;
 
 
     public AudioClip _jump;
@@ -18,6 +19,7 @@ public class AudioManagerPlayer : MonoBehaviour
     public AudioClip _aboveGroundTheme;
     public AudioClip _underGroundTheme;
     public AudioClip _takeDamage;
+    public AudioClip _landing;
 
     [SerializeField]
     private bool hasFaded;
@@ -32,6 +34,7 @@ public class AudioManagerPlayer : MonoBehaviour
         aboveGroundTheme.clip = _aboveGroundTheme;
         underGroundTheme.clip = _underGroundTheme;
         takeDamage.clip = _takeDamage;
+        landing.clip = _landing;
 
         PlayAbove();
         PlayUnder();
@@ -51,6 +54,11 @@ public class AudioManagerPlayer : MonoBehaviour
             }
         }
 
+    }
+
+    public void PlayLanding()
+    {
+        landing.Play();
     }
 
     public void PlayDash()
