@@ -34,6 +34,8 @@ public class AIScript : MonoBehaviour
     [SerializeField]
     private SpriteRenderer pSprite;
 
+    public GameObject smoke;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,6 +49,10 @@ public class AIScript : MonoBehaviour
     void Update()
     {
         RaycastingCheck();
+    }
+
+    private void FixedUpdate()
+    {
         Movement();
     }
 

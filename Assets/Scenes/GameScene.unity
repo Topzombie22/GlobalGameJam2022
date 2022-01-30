@@ -1969,6 +1969,7 @@ MonoBehaviour:
   jumping: 0
   speed: 4
   pSprite: {fileID: 106807705}
+  smoke: {fileID: 5828939708110747082, guid: 85ea7ec654413d64ea3a3af9ccd23f5e, type: 3}
 --- !u!95 &106807708
 Animator:
   serializedVersion: 3
@@ -3078,6 +3079,7 @@ MonoBehaviour:
   jumping: 0
   speed: 4
   pSprite: {fileID: 222616293}
+  smoke: {fileID: 5828939708110747082, guid: 85ea7ec654413d64ea3a3af9ccd23f5e, type: 3}
 --- !u!50 &222616291
 Rigidbody2D:
   serializedVersion: 4
@@ -3296,7 +3298,7 @@ Transform:
   m_GameObject: {fileID: 232554042}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.94389915, y: -14.386968, z: 12.993819}
-  m_LocalScale: {x: 3.9998, y: 1, z: 1}
+  m_LocalScale: {x: 3.9998, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 1902898844}
   m_RootOrder: 13
@@ -7260,7 +7262,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10, y: 3.5, z: -10}
+  m_LocalPosition: {x: -10, y: 3, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -10151,7 +10153,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 704763209}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10, y: 1.5, z: 0}
+  m_LocalPosition: {x: -10, y: 1, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 1141684363}
@@ -10235,6 +10237,10 @@ MonoBehaviour:
   sanity: 3
   sanitySlider: {fileID: 889194580}
   safePos: {x: 0, y: 0, z: 0}
+  smoke: {fileID: 5828939708110747082, guid: 85ea7ec654413d64ea3a3af9ccd23f5e, type: 3}
+  button1: {fileID: 1460451492}
+  button2: {fileID: 756778304}
+  textDead: {fileID: 1673715062}
   deathScreen: {fileID: 1802498595}
   sanityText: {fileID: 351158912}
   sanitySprite: {fileID: 369232702}
@@ -12652,6 +12658,7 @@ MonoBehaviour:
   jumping: 0
   speed: 4
   pSprite: {fileID: 829717836}
+  smoke: {fileID: 5828939708110747082, guid: 85ea7ec654413d64ea3a3af9ccd23f5e, type: 3}
 --- !u!50 &829717834
 Rigidbody2D:
   serializedVersion: 4
@@ -13019,7 +13026,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 843567983}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10, y: 3.5, z: -10}
+  m_LocalPosition: {x: -10, y: 3, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 807678980}
@@ -15119,6 +15126,7 @@ MonoBehaviour:
   jumping: 0
   speed: 4
   pSprite: {fileID: 963791332}
+  smoke: {fileID: 5828939708110747082, guid: 85ea7ec654413d64ea3a3af9ccd23f5e, type: 3}
 --- !u!50 &963791330
 Rigidbody2D:
   serializedVersion: 4
@@ -16663,6 +16671,7 @@ MonoBehaviour:
   jumping: 0
   speed: 4
   pSprite: {fileID: 1025347143}
+  smoke: {fileID: 5828939708110747082, guid: 85ea7ec654413d64ea3a3af9ccd23f5e, type: 3}
 --- !u!50 &1025347141
 Rigidbody2D:
   serializedVersion: 4
@@ -18047,6 +18056,7 @@ MonoBehaviour:
   jumping: 0
   speed: 4
   pSprite: {fileID: 1120725270}
+  smoke: {fileID: 5828939708110747082, guid: 85ea7ec654413d64ea3a3af9ccd23f5e, type: 3}
 --- !u!50 &1120725268
 Rigidbody2D:
   serializedVersion: 4
@@ -22678,6 +22688,7 @@ MonoBehaviour:
   jumping: 0
   speed: 4
   pSprite: {fileID: 1391035622}
+  smoke: {fileID: 5828939708110747082, guid: 85ea7ec654413d64ea3a3af9ccd23f5e, type: 3}
 --- !u!50 &1391035620
 Rigidbody2D:
   serializedVersion: 4
@@ -23317,6 +23328,7 @@ MonoBehaviour:
   jumping: 0
   speed: 4
   pSprite: {fileID: 1460345535}
+  smoke: {fileID: 5828939708110747082, guid: 85ea7ec654413d64ea3a3af9ccd23f5e, type: 3}
 --- !u!50 &1460345533
 Rigidbody2D:
   serializedVersion: 4
@@ -24340,6 +24352,7 @@ MonoBehaviour:
   jumping: 0
   speed: 4
   pSprite: {fileID: 1495102354}
+  smoke: {fileID: 5828939708110747082, guid: 85ea7ec654413d64ea3a3af9ccd23f5e, type: 3}
 --- !u!50 &1495102352
 Rigidbody2D:
   serializedVersion: 4
@@ -32786,6 +32799,7 @@ MonoBehaviour:
   jumping: 0
   speed: 4
   pSprite: {fileID: 1874249382}
+  smoke: {fileID: 5828939708110747082, guid: 85ea7ec654413d64ea3a3af9ccd23f5e, type: 3}
 --- !u!50 &1874249380
 Rigidbody2D:
   serializedVersion: 4
@@ -34550,6 +34564,7 @@ MonoBehaviour:
   jumping: 0
   speed: 4
   pSprite: {fileID: 1978550051}
+  smoke: {fileID: 5828939708110747082, guid: 85ea7ec654413d64ea3a3af9ccd23f5e, type: 3}
 --- !u!50 &1978550049
 Rigidbody2D:
   serializedVersion: 4
@@ -34914,6 +34929,7 @@ MonoBehaviour:
   jumping: 0
   speed: 4
   pSprite: {fileID: 2006312409}
+  smoke: {fileID: 5828939708110747082, guid: 85ea7ec654413d64ea3a3af9ccd23f5e, type: 3}
 --- !u!50 &2006312407
 Rigidbody2D:
   serializedVersion: 4
@@ -35092,6 +35108,7 @@ MonoBehaviour:
   jumping: 0
   speed: 4
   pSprite: {fileID: 2014469967}
+  smoke: {fileID: 5828939708110747082, guid: 85ea7ec654413d64ea3a3af9ccd23f5e, type: 3}
 --- !u!50 &2014469965
 Rigidbody2D:
   serializedVersion: 4
@@ -36903,6 +36920,7 @@ MonoBehaviour:
   jumping: 0
   speed: 4
   pSprite: {fileID: 2102170071}
+  smoke: {fileID: 5828939708110747082, guid: 85ea7ec654413d64ea3a3af9ccd23f5e, type: 3}
 --- !u!50 &2102170069
 Rigidbody2D:
   serializedVersion: 4

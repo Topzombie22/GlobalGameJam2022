@@ -42,6 +42,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public Vector3 safePos;
 
+    public GameObject smoke;
+
+    public GameObject button1;
+    public GameObject button2;
+    public Text textDead;
+
     [SerializeField]
     private GameObject deathScreen;
     [SerializeField]
@@ -92,15 +98,15 @@ public class PlayerController : MonoBehaviour
 
         if (dead == false)
         {
-            Move();
             AliveCheck();
             CheckPointTracker();
+            Move();
         }
     }
 
     private void FixedUpdate()
     {
-
+        
     }
 
     private void AliveCheck()
@@ -181,6 +187,8 @@ public class PlayerController : MonoBehaviour
 
         if (canDash == true && Input.GetButtonDown("Fire2") && input != 0)
         {
+            var obj = Instantiate(smoke, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
+            Destroy(obj, 0.51f);
             anim.SetTrigger("Dash");
             canDash = false;
             _audio.PlayDash();
@@ -214,6 +222,8 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "EnemyHead" && player.transform.position.y > collision.transform.position.y)
         {
             Debug.Log("Collided");
+            var obj = Instantiate(smoke, new Vector3(collision.transform.position.x, collision.transform.position.y, 0), Quaternion.identity);
+            Destroy(obj, 0.51f);
             collision.gameObject.transform.parent.localScale = new Vector3(collision.gameObject.transform.parent.localScale.x, 0.2f, 1f);
             collision.gameObject.GetComponentInParent<AIScript>().enabled = false;
             collision.gameObject.GetComponentInParent<Rigidbody2D>().simulated = false;
@@ -264,6 +274,9 @@ public class PlayerController : MonoBehaviour
         backGround.CrossFadeAlpha(255f, 2f, false);
         yield return new WaitForSeconds(0.75f);
         Destroy(anim);
+        textDead.CrossFadeAlpha(255f, 2f, false);
+        button1.SetActive(true);
+        button2.SetActive(true);
     }
 
     IEnumerator TakeDamage()
@@ -288,7 +301,7 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator InvulnTimer()
     {
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(4f);
         justTookDamage = false;
     }
 

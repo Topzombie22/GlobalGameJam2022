@@ -56,6 +56,7 @@ public class EndGameScript : MonoBehaviour
 
     IEnumerator EndGame()
     {
+        player.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
         player.GetComponent<PlayerController>().enabled = false;
         player.GetComponent<Animator>().SetFloat("Direction", 0f);
         yield return new WaitForSeconds(1f);

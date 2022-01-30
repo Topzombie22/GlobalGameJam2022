@@ -112,6 +112,7 @@ public class TransitionScript : MonoBehaviour
 
     IEnumerator Transition()
     {
+        player.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
         player.GetComponent<PlayerController>().enabled = false;
         player.GetComponent<Animator>().SetFloat("Direction", 0f); // needs to be changed later
         yield return new WaitForSeconds(0.5f);
