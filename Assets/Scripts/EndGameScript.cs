@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EndGameScript : MonoBehaviour
 {
@@ -12,7 +13,14 @@ public class EndGameScript : MonoBehaviour
     public Image sanityBar;
     public GameObject cam;
 
+    public GameObject _audio;
+    public AudioManagerPlayer manager;
+
+    public Text credits;
+
     private bool moving;
+
+    private bool movingText;
 
     public GameObject player;
     public GameObject spike;
@@ -20,7 +28,7 @@ public class EndGameScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        manager = _audio.GetComponent<AudioManagerPlayer>();   
     }
 
     // Update is called once per frame
@@ -35,6 +43,7 @@ public class EndGameScript : MonoBehaviour
         {
             spike.transform.position += new Vector3(0, -1, 0) * Time.deltaTime * 20f;
         }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -52,11 +61,16 @@ public class EndGameScript : MonoBehaviour
         yield return new WaitForSeconds(1f);
         moving = true;
         yield return new WaitForSeconds(0.25f);
+        manager.PlayTakeDamage();
         moving = false;
         deathScreen.SetActive(true);
         backGround.CrossFadeColor(Color.red, 1f, false, false);
         yield return new WaitForSeconds(1f);
         backGround.CrossFadeColor(Color.black, 1f, false, false);
+        yield return new WaitForSeconds(1f);
+        credits.CrossFadeAlpha(255f, 1f, false);
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("Menu");
     }
 
 }

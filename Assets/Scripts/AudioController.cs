@@ -5,15 +5,17 @@ using UnityEngine.UI;
 
 public class AudioController : MonoBehaviour
 {
-    [SerializeField]
-    private AudioSource _audio;
-    [SerializeField]
-    private AudioSource _audio2;
+    public AudioSource hover1;
+    public AudioSource click1;
+
+    public AudioClip hover;
+    public AudioClip click;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        hover1.clip = hover;
+        click1.clip = click;
     }
 
     // Update is called once per frame
@@ -25,12 +27,12 @@ public class AudioController : MonoBehaviour
     public void UIHover()
     {
         Debug.Log("Moused");
-        _audio2.Play();
+        hover1.Play();
     }
 
     public void UIClick()
     {
-        _audio.Play();
+        click1.Play();
     }
 
 

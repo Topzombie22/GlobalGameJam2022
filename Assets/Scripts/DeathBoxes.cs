@@ -20,6 +20,11 @@ public class DeathBoxes : MonoBehaviour
     private GameObject player;
 
     [SerializeField]
+    private GameObject playAgain;
+    [SerializeField]
+    private GameObject menu;
+
+    [SerializeField]
     private Transform cam;
 
     public TextBoxController text;
@@ -76,9 +81,9 @@ public class DeathBoxes : MonoBehaviour
                 Debug.Log("Touched1");
                 collision.gameObject.GetComponent<PlayerController>().enabled = false;
                 deathScreen.SetActive(true);
-                sanityBar.CrossFadeAlpha(1f, 2f, false);
-                sanitySprite.CrossFadeAlpha(1f, 2f, false);
-                sanityText.CrossFadeAlpha(1f, 2f, false);
+                sanityBar.CrossFadeAlpha(1f, 1f, false);
+                sanitySprite.CrossFadeAlpha(1f, 1f, false);
+                sanityText.CrossFadeAlpha(1f, 1f, false);
                 backGround.CrossFadeAlpha(255f, 2f, false);
                 _audio.PlayFall();
                 StartCoroutine(AliveTimer());
@@ -90,6 +95,8 @@ public class DeathBoxes : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         _text.CrossFadeAlpha(255f, 2f, false);
+        playAgain.SetActive(true);
+        menu.SetActive(true);
     }
 
 
