@@ -42,6 +42,19 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public Vector3 safePos;
 
+    [SerializeField]
+    private GameObject deathScreen;
+    [SerializeField]
+    private Text sanityText;
+    [SerializeField]
+    private Image sanitySprite;
+    [SerializeField]
+    private Image sanityBar;
+    [SerializeField]
+    private RawImage backGround;
+
+    private bool dead;
+
     private bool groundedSound;
 
     public TextBoxController text;
@@ -74,12 +87,25 @@ public class PlayerController : MonoBehaviour
     {
         sanitySlider.value = Mathf.Lerp(sanitySlider.value, sanity, 1f * Time.deltaTime);
 
-        Move();
+        if (dead == false)
+        {
+            Move();
+            AliveCheck();
+        }
     }
 
     private void FixedUpdate()
     {
 
+    }
+
+    private void AliveCheck()
+    {
+        if (sanity < 1)
+        {
+            StartCoroutine(PlayerDeath());
+            dead = true;
+        }
     }
 
     private void Move()
@@ -195,6 +221,22 @@ public class PlayerController : MonoBehaviour
             text.textBox = Random.Range(4, 6);
             StartCoroutine(TakeDamage());
         }
+    }
+
+    IEnumerator PlayerDeath()
+    {
+        canJump = false;
+        canDash = false;
+        canMove = false;
+        yield return new WaitForSeconds(1f);
+        anim.SetTrigger("Dead");
+        deathScreen.SetActive(true);
+        sanityBar.CrossFadeAlpha(0f, 2f, false);
+        sanitySprite.CrossFadeAlpha(0f, 2f, false);
+        sanityText.CrossFadeAlpha(0f, 2f, false);
+        backGround.CrossFadeAlpha(255f, 2f, false);
+        yield return new WaitForSeconds(0.75f);
+        Destroy(anim);
     }
 
     IEnumerator TakeDamage()

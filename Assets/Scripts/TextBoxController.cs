@@ -8,6 +8,8 @@ public class TextBoxController : MonoBehaviour
     public int textBox;
     private string curText;
     private string textWipe = "";
+    private bool skip;
+    private bool talking;
 
     // Start is called before the first frame update
     void Start()
@@ -104,16 +106,32 @@ public class TextBoxController : MonoBehaviour
         }
     }
 
+    void TalkingCheck()
+    {
+        if (talking == true)
+        {
+            skip = true;
+        }
+    }
+
     IEnumerator TextDisplay()
     {
+        TalkingCheck();
         textBox = 0;
+        talking = true;
         for (int i = 0; i < curText.Length; i++)
         {
             text.text = curText.Substring(0, i);
             yield return new WaitForSeconds(0.05f);
+            if (skip == true)
+            {
+                skip = false;
+                break;
+            }
         }
         yield return new WaitForSeconds(2f);
         text.text = textWipe;
+        talking = false;
     }
 
 }

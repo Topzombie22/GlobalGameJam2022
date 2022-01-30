@@ -48,7 +48,7 @@ public class DeathBoxes : MonoBehaviour
         {
             player = collision.gameObject;
 
-            if (player.GetComponent<PlayerController>().sanity <= 0)
+            if (player.GetComponent<PlayerController>().sanity <= 1)
             {
                 var vcam = cam.gameObject.GetComponent<Cinemachine.CinemachineVirtualCamera>();
                 vcam.LookAt = null;
@@ -64,7 +64,7 @@ public class DeathBoxes : MonoBehaviour
                 StartCoroutine(TextTimer());
             }
 
-            if (player.GetComponent<PlayerController>().sanity > 0)
+            if (player.GetComponent<PlayerController>().sanity > 1)
             {
                 var vcam = cam.gameObject.GetComponent<Cinemachine.CinemachineVirtualCamera>();
                 vcam.LookAt = null;
