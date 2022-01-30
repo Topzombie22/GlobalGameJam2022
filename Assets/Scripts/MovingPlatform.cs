@@ -6,6 +6,8 @@ public class MovingPlatform : MonoBehaviour
 {
     public float speed;
     private bool move = true;
+    [SerializeField]
+    private bool UpNDown;
     public float xBoundsleft;
     public float xBoundsright;
 
@@ -18,19 +20,38 @@ public class MovingPlatform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+    }
+
+    private void FixedUpdate()
+    {
         MovePlatform();
     }
 
     private void MovePlatform()
     {
-        if (move == true)
+        if (UpNDown == false)
         {
-            transform.position += new Vector3(1, 0, 0) * Time.deltaTime * speed;
-
-            if (transform.position.x < xBoundsleft || transform.position.x > xBoundsright)
+            if (move == true)
             {
-                speed = speed * -1;
+                transform.position += new Vector3(1, 0, 0) * Time.deltaTime * speed;
 
+                if (transform.position.x < xBoundsleft || transform.position.x > xBoundsright)
+                {
+                    speed = speed * -1;
+                }
+            }
+        }
+        else if (UpNDown == true)
+        {
+            if (move == true)
+            {
+                transform.position += new Vector3(0, 1, 0) * Time.deltaTime * speed;
+
+                if (transform.position.y < xBoundsleft || transform.position.y > xBoundsright)
+                {
+                    speed = speed * -1;
+                }
             }
         }
     }

@@ -57,7 +57,7 @@ public class AIScript : MonoBehaviour
         {
             if (movingLeft == true)
             {
-                RaycastHit2D hitLeftDown = (Physics2D.Raycast(this.gameObject.transform.position - new Vector3(bc.bounds.extents.x + 0.5f, 0, 0), Vector2.down, rayCastCheckDown));
+                RaycastHit2D hitLeftDown = Physics2D.Raycast(this.gameObject.transform.position - new Vector3(bc.bounds.extents.x + 0.5f, 0, 0), Vector2.down, rayCastCheckDown);
                 if (hitLeftDown.collider == null)
                 {
                     canRaycast = false;
@@ -72,7 +72,7 @@ public class AIScript : MonoBehaviour
 
             if (movingLeft == false)
             {
-                RaycastHit2D hitRightDown = (Physics2D.Raycast(this.gameObject.transform.position - new Vector3(bc.bounds.extents.x - 3f, 0, 0), Vector2.down, rayCastCheckDown));
+                RaycastHit2D hitRightDown = Physics2D.Raycast(this.gameObject.transform.position - new Vector3(bc.bounds.extents.x - 3f, 0, 0), Vector2.down, rayCastCheckDown);
                 if (hitRightDown.collider == null)
                 {
                     turningAround = true;

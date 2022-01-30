@@ -60,6 +60,9 @@ public class PlayerController : MonoBehaviour
     public TextBoxController text;
     public GameObject textBox;
 
+    public int currCheckpoint;
+    public Transform[] respawns;
+
     [SerializeField]
     private Animator anim;
 
@@ -91,6 +94,7 @@ public class PlayerController : MonoBehaviour
         {
             Move();
             AliveCheck();
+            CheckPointTracker();
         }
     }
 
@@ -138,7 +142,10 @@ public class PlayerController : MonoBehaviour
             {
                 canJump = true;
                 isGrounded = true;
-                safePos = this.gameObject.transform.position;
+                if (currCheckpoint == 0)
+                {
+                    safePos = this.gameObject.transform.position;
+                }
             }
             else
             {
@@ -179,6 +186,26 @@ public class PlayerController : MonoBehaviour
             _audio.PlayDash();
             StartCoroutine(MoveTimer());
             StartCoroutine(DashTimer());
+        }
+    }
+
+    private void CheckPointTracker()
+    {
+        if (currCheckpoint == 1)
+        {
+            safePos = new Vector3(respawns[0].transform.position.x, respawns[0].transform.position.y, 0);
+        }
+        if (currCheckpoint == 2)
+        {
+            safePos = new Vector3(respawns[1].transform.position.x, respawns[1].transform.position.y, 0);
+        }
+        if (currCheckpoint == 3)
+        {
+            safePos = new Vector3(respawns[2].transform.position.x, respawns[2].transform.position.y, 0);
+        }
+        if (currCheckpoint == 4)
+        {
+            safePos = new Vector3(respawns[3].transform.position.x, respawns[3].transform.position.y, 0);
         }
     }
 

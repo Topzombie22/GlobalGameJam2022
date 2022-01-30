@@ -116,6 +116,8 @@ public class TransitionScript : MonoBehaviour
         player.GetComponent<Animator>().SetFloat("Direction", 0f); // needs to be changed later
         yield return new WaitForSeconds(0.5f);
         moveStick = true;
+        player.GetComponent<Animator>().SetBool("IsGrounded", false);
+        player.GetComponent<Animator>().SetFloat("Velocity", -0.1f);
         deathScreen.SetActive(true);
         sanityBar.CrossFadeAlpha(1f, 1f, false);
         sanitySprite.CrossFadeAlpha(1f, 1f, false);
