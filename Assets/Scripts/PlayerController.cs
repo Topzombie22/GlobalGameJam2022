@@ -106,7 +106,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
+
     }
 
     private void AliveCheck()
@@ -239,6 +239,9 @@ public class PlayerController : MonoBehaviour
             {
 
             }
+            collision.transform.parent.GetComponent<Collider2D>().enabled = false;
+            collision.transform.parent.GetComponent<Rigidbody2D>().simulated = false;
+            collision.transform.parent.GetComponent<Animator>().enabled = false;
         }
 
         if (collision.gameObject.name == "Transition")
